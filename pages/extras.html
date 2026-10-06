@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Options supplémentaires de votre réservation FlyGo."
+    >
+
+    <title>Options supplémentaires - FlyGo</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                FLYGO
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="flights.html">Vols</a>
+                <a href="hotels.html">Hôtels</a>
+                <a href="cars.html">Voitures</a>
+                <a href="#">Voyages</a>
+                <a href="bookings.html">Mes réservations</a>
+
+                <a
+                    href="profile.html"
+                    class="login-link"
+                >
+                    Connexion
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="extras-page">
+
+        <section class="details-header">
+
+            <div class="container">
+
+                <a
+                    href="passengers.html"
+                    class="back-link"
+                >
+                    Retour aux passagers
+                </a>
+
+                <div id="extrasRoute"></div>
+
+            </div>
+
+        </section>
+
+
+        <section class="extras-content">
+
+            <div class="container extras-layout">
+
+                <section class="extras-main">
+
+                    <div class="detail-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    ÉTAPE 4
+                                </span>
+
+                                <h1>
+                                    Personnalisez votre voyage
+                                </h1>
+
+                                <p class="form-introduction">
+                                    Ajoutez uniquement les services
+                                    dont vous avez besoin.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="extras-list"
+                            id="extrasList"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    CONDITIONS
+                                </span>
+
+                                <h2>
+                                    Informations importantes
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="conditions-box">
+
+                            <p>
+                                Les services sélectionnés seront
+                                ajoutés au montant de votre réservation.
+                            </p>
+
+                            <p>
+                                Certains services peuvent être
+                                soumis aux conditions de la compagnie.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <aside class="booking-summary">
+
+                    <div class="summary-heading">
+
+                        <h2>
+                            Votre réservation
+                        </h2>
+
+                    </div>
+
+
+                    <div id="extrasSummary">
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="continue-button"
+                        id="continueExtras"
+                    >
+                        Continuer vers le paiement
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/app.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/extras.js"></script>
+
+</body>
+
+</html>

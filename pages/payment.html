@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Paiement de votre réservation FlyGo."
+    >
+
+    <title>Paiement - FlyGo</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                FLYGO
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav
+                class="main-nav"
+                id="mainNav"
+            >
+
+                <a href="flights.html">
+                    Vols
+                </a>
+
+                <a href="hotels.html">
+                    Hôtels
+                </a>
+
+                <a href="cars.html">
+                    Voitures
+                </a>
+
+                <a href="#">
+                    Voyages
+                </a>
+
+                <a href="bookings.html">
+                    Mes réservations
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="login-link"
+                >
+                    Connexion
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="payment-page">
+
+        <section class="details-header">
+
+            <div class="container">
+
+                <a
+                    href="extras.html"
+                    class="back-link"
+                >
+                    Retour aux options
+                </a>
+
+                <div id="paymentRoute"></div>
+
+            </div>
+
+        </section>
+
+
+        <section class="payment-content">
+
+            <div class="container payment-layout">
+
+                <section class="payment-main">
+
+                    <div class="detail-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    ÉTAPE 5
+                                </span>
+
+                                <h1>
+                                    Paiement
+                                </h1>
+
+                                <p class="form-introduction">
+                                    Sélectionnez votre mode de paiement
+                                    et renseignez les informations demandées.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="payment-methods"
+                            id="paymentMethods"
+                        >
+
+                            <button
+                                type="button"
+                                class="payment-method active"
+                                data-method="card"
+                            >
+                                <strong>
+                                    Carte bancaire
+                                </strong>
+
+                                <span>
+                                    Visa, Mastercard
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="payment-method"
+                                data-method="mobile"
+                            >
+                                <strong>
+                                    Mobile Money
+                                </strong>
+
+                                <span>
+                                    Paiement mobile
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="payment-method"
+                                data-method="bank"
+                            >
+                                <strong>
+                                    Virement bancaire
+                                </strong>
+
+                                <span>
+                                    Paiement par virement
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                        <form
+                            id="paymentForm"
+                            novalidate
+                        >
+
+                            <div
+                                id="paymentFields"
+                                class="payment-fields"
+                            >
+                            </div>
+
+
+                            <div class="secure-payment">
+
+                                <strong>
+                                    Paiement sécurisé
+                                </strong>
+
+                                <p>
+                                    Dans cette version frontend,
+                                    aucune transaction réelle ne sera effectuée.
+                                </p>
+
+                            </div>
+
+
+                            <label class="payment-agreement">
+
+                                <input
+                                    type="checkbox"
+                                    id="paymentAgreement"
+                                >
+
+                                <span>
+                                    J'accepte les conditions de réservation
+                                    et je confirme les informations saisies.
+                                </span>
+
+                            </label>
+
+
+                            <div
+                                id="paymentError"
+                                class="form-error hidden"
+                                role="alert"
+                            >
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="payment-button"
+                            >
+                                Confirmer le paiement
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+
+                <aside class="booking-summary">
+
+                    <div class="summary-heading">
+
+                        <h2>
+                            Récapitulatif
+                        </h2>
+
+                    </div>
+
+
+                    <div id="paymentSummary">
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="../js/app.js"></script>
+<script src="../js/storage.js"></script>
+<script src="../js/payment.js"></script>
+</body>
+
+</html>

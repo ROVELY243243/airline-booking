@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Choisissez votre siège pour votre vol."
+    >
+
+    <title>Choix du siège - FlyGo</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                FLYGO
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="flights.html">Vols</a>
+                <a href="hotels.html">Hôtels</a>
+                <a href="cars.html">Voitures</a>
+                <a href="#">Voyages</a>
+                <a href="bookings.html">Mes réservations</a>
+
+                <a
+                    href="profile.html"
+                    class="login-link"
+                >
+                    Connexion
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="seats-page">
+
+        <section class="details-header">
+
+            <div class="container">
+
+                <a
+                    href="flight-details.html"
+                    class="back-link"
+                >
+                    Retour au vol
+                </a>
+
+                <div id="seatRoute"></div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seats-content">
+
+            <div class="container seats-layout">
+
+                <section class="seat-selection-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                ÉTAPE 2
+                            </span>
+
+                            <h1>
+                                Choisissez votre siège
+                            </h1>
+
+                            <p class="seat-help">
+                                Sélectionnez un siège disponible
+                                pour continuer votre réservation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="seat-legend">
+
+                        <div class="legend-item">
+
+                            <span class="seat-demo available"></span>
+
+                            <span>
+                                Disponible
+                            </span>
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="seat-demo selected"></span>
+
+                            <span>
+                                Sélectionné
+                            </span>
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="seat-demo occupied"></span>
+
+                            <span>
+                                Occupé
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="aircraft">
+
+                        <div class="aircraft-front">
+                            Avant
+                        </div>
+
+
+                        <div class="seat-map-container">
+
+                            <div
+                                class="seat-map"
+                                id="seatMap"
+                            >
+                            </div>
+
+                        </div>
+
+
+                        <div class="aircraft-back">
+                            Arrière
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <aside class="booking-summary">
+
+                    <div class="summary-heading">
+
+                        <h2>
+                            Résumé
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        id="seatSummary"
+                    >
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="continue-button"
+                        id="continueSeats"
+                    >
+                        Continuer
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/app.js"></script>
+    <script src="../js/seats.js"></script>
+
+</body>
+
+</html>

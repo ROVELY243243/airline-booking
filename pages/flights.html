@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Résultats de recherche de vols FlyGo."
+    >
+
+    <title>Résultats des vols - FlyGo</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                FLYGO
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="flights.html">
+                    Vols
+                </a>
+
+                <a href="hotels.html">
+                    Hôtels
+                </a>
+
+                <a href="cars.html">
+                    Voitures
+                </a>
+
+                <a href="#">
+                    Voyages
+                </a>
+
+                <a href="bookings.html">
+                    Mes réservations
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="login-link"
+                >
+                    Connexion
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="results-page">
+
+        <section class="results-header">
+
+            <div class="container">
+
+                <a
+                    href="../index.html"
+                    class="back-link"
+                >
+                    Modifier la recherche
+                </a>
+
+                <div
+                    class="route-summary"
+                    id="routeSummary"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="results-content">
+
+            <div class="container results-layout">
+
+                <aside class="filters-panel">
+
+                    <div class="filters-header">
+
+                        <h2>Filtrer</h2>
+
+                        <button
+                            type="button"
+                            id="resetFilters"
+                        >
+                            Réinitialiser
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <h3>Nombre d'escales</h3>
+
+                        <label class="filter-option">
+
+                            <input
+                                type="checkbox"
+                                value="0"
+                                class="stop-filter"
+                            >
+
+                            <span>Vol direct</span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="checkbox"
+                                value="1"
+                                class="stop-filter"
+                            >
+
+                            <span>1 escale</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <h3>Compagnies</h3>
+
+                        <div id="airlineFilters"></div>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <h3>Prix maximum</h3>
+
+                        <div class="price-range">
+
+                            <input
+                                type="range"
+                                id="priceFilter"
+                                min="500"
+                                max="1500"
+                                step="10"
+                                value="1500"
+                            >
+
+                            <div class="price-range-value">
+
+                                <span>500 USD</span>
+
+                                <strong id="priceValue">
+                                    1500 USD
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+
+                <section class="flights-section">
+
+                    <div class="results-toolbar">
+
+                        <div>
+
+                            <strong id="resultsCount">
+                                0 vols
+                            </strong>
+
+                            <span class="results-description">
+                                disponibles
+                            </span>
+
+                        </div>
+
+
+                        <div class="sort-container">
+
+                            <label for="sortFlights">
+                                Trier par
+                            </label>
+
+                            <select id="sortFlights">
+
+                                <option value="price">
+                                    Prix
+                                </option>
+
+                                <option value="duration">
+                                    Durée
+                                </option>
+
+                                <option value="departure">
+                                    Heure de départ
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="flightsList"
+                        class="flights-list"
+                    >
+                    </div>
+
+
+                    <div
+                        id="noResults"
+                        class="no-results hidden"
+                    >
+
+                        <h2>
+                            Aucun vol trouvé
+                        </h2>
+
+                        <p>
+                            Essayez de modifier vos filtres
+                            ou votre recherche.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../data/flights.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/flights.js"></script>
+
+</body>
+
+</html>

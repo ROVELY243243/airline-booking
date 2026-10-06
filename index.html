@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="FlyGo - Réservez vos vols, hôtels et voitures facilement."
+    >
+
+    <title>FlyGo - Réservez votre voyage</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                FLYGO
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="pages/flights.html">
+                    Vols
+                </a>
+
+                <a href="pages/hotels.html">
+                    Hôtels
+                </a>
+
+                <a href="pages/cars.html">
+                    Voitures
+                </a>
+
+                <a href="#">
+                    Voyages
+                </a>
+
+                <a href="pages/bookings.html">
+                    Mes réservations
+                </a>
+
+                <a
+                    href="pages/profile.html"
+                    class="login-link"
+                >
+                    Connexion
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU PRINCIPAL
+    ========================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        VOTRE VOYAGE COMMENCE ICI
+                    </span>
+
+                    <h1>
+                        Voyagez plus loin,
+                        réservez plus simplement.
+                    </h1>
+
+                    <p>
+                        Recherchez des vols, hôtels et voitures
+                        au même endroit.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     SEARCH BOX
+                ========================== -->
+
+                <div class="search-card">
+
+                    <div class="trip-types">
+
+                        <button
+                            class="trip-type active"
+                            type="button"
+                            data-trip="roundtrip"
+                        >
+                            Aller-retour
+                        </button>
+
+                        <button
+                            class="trip-type"
+                            type="button"
+                            data-trip="oneway"
+                        >
+                            Aller simple
+                        </button>
+
+                        <button
+                            class="trip-type"
+                            type="button"
+                            data-trip="multi"
+                        >
+                            Multi-destinations
+                        </button>
+
+                    </div>
+
+
+                    <form id="flightSearchForm">
+
+                        <div class="search-grid">
+
+
+                            <!-- DÉPART -->
+
+                            <div class="field-group">
+
+                                <label for="departure">
+                                    Départ
+                                </label>
+
+                                <div class="input-box">
+
+                                    <span class="field-icon">
+                                        
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="departure"
+                                        name="departure"
+                                        placeholder="Ville ou aéroport"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- DESTINATION -->
+
+                            <div class="field-group">
+
+                                <label for="destination">
+                                    Destination
+                                </label>
+
+                                <div class="input-box">
+
+                                    <span class="field-icon">
+                                        
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="destination"
+                                        name="destination"
+                                        placeholder="Ville ou aéroport"
+                                        autocomplete="off"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- DÉPART -->
+
+                            <div class="field-group">
+
+                                <label for="departureDate">
+                                    Départ
+                                </label>
+
+                                <div class="input-box">
+
+                                    <input
+                                        type="date"
+                                        id="departureDate"
+                                        name="departureDate"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- RETOUR -->
+
+                            <div
+                                class="field-group"
+                                id="returnField"
+                            >
+
+                                <label for="returnDate">
+                                    Retour
+                                </label>
+
+                                <div class="input-box">
+
+                                    <input
+                                        type="date"
+                                        id="returnDate"
+                                        name="returnDate"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- VOYAGEURS -->
+
+                            <div class="field-group">
+
+                                <label for="passengers">
+                                    Voyageurs
+                                </label>
+
+                                <div class="input-box">
+
+                                    <select
+                                        id="passengers"
+                                        name="passengers"
+                                    >
+                                        <option value="1">
+                                            1 voyageur
+                                        </option>
+
+                                        <option value="2">
+                                            2 voyageurs
+                                        </option>
+
+                                        <option value="3">
+                                            3 voyageurs
+                                        </option>
+
+                                        <option value="4">
+                                            4 voyageurs
+                                        </option>
+
+                                        <option value="5">
+                                            5 voyageurs
+                                        </option>
+
+                                        <option value="6">
+                                            6 voyageurs
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CLASSE -->
+
+                            <div class="field-group">
+
+                                <label for="travelClass">
+                                    Classe
+                                </label>
+
+                                <div class="input-box">
+
+                                    <select
+                                        id="travelClass"
+                                        name="travelClass"
+                                    >
+
+                                        <option value="economy">
+                                            Économique
+                                        </option>
+
+                                        <option value="premium">
+                                            Premium Economy
+                                        </option>
+
+                                        <option value="business">
+                                            Business
+                                        </option>
+
+                                        <option value="first">
+                                            Première
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="search-actions">
+
+                            <button
+                                type="submit"
+                                class="search-button"
+                            >
+                                Rechercher des vols
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section class="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        FLYGO
+                    </span>
+
+                    <h2>
+                        Tout votre voyage au même endroit
+                    </h2>
+
+                </div>
+
+
+                <div class="service-grid">
+
+                    <a
+                        href="pages/flights.html"
+                        class="service-card"
+                    >
+                        <h3>Vols</h3>
+
+                        <p>
+                            Trouvez et comparez vos vols.
+                        </p>
+                    </a>
+
+
+                    <a
+                        href="pages/hotels.html"
+                        class="service-card"
+                    >
+                        <h3>Hôtels</h3>
+
+                        <p>
+                            Trouvez votre hébergement.
+                        </p>
+                    </a>
+
+
+                    <a
+                        href="pages/cars.html"
+                        class="service-card"
+                    >
+                        <h3>Voitures</h3>
+
+                        <p>
+                            Louez une voiture facilement.
+                        </p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
